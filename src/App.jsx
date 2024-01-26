@@ -3,7 +3,7 @@ import { puppyList } from './data.js'
 import { useState } from 'react'
 
 function App() {
-  const [puppies, setPuppies] = useState(puppyList);
+  const [puppies] = useState(puppyList);
   const [featPupId, setFeatPupId] = useState(null);
   const featuredPup = puppies.find((pup) => pup.id === featPupId)
   console.log(featuredPup);
@@ -12,6 +12,7 @@ function App() {
     console.log("puppy id: ", puppy.id);
     setFeatPupId(puppy.id);
   }
+  
   return (
     <div className='App'>
       {
